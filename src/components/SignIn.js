@@ -7,7 +7,16 @@ import styles from "./SignIn.module.css";
 const SignIn = () => {
     const defaultValues = { username: ""};
     const { handleSubmit, reset, control, formState: { errors } } = useForm({ defaultValues: defaultValues });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    if (data.username.length < 3) {
+        // reset(defaultValues);
+        return;
+    }
+    console.log(data);
+    localStorage.setItem("user", data.username);
+    reset(defaultValues);
+    };
+
   return (
     <form className={styles.form}>
       <Controller
