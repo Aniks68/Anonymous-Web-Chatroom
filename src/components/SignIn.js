@@ -3,17 +3,18 @@ import React from "react";
 import { Button } from "@material-ui/core";
 import { Controller, useForm } from "react-hook-form";
 import styles from "./SignIn.module.css";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+    const navigate = useNavigate();
     const defaultValues = { username: ""};
     const { handleSubmit, reset, control, formState: { errors } } = useForm({ defaultValues: defaultValues });
   const onSubmit = (data) => {
     if (data.username.length < 3) {
-        // reset(defaultValues);
         return;
     }
     console.log(data);
-    localStorage.setItem("user", data.username);
+    navigate(`/chat/${data.username}`);
     reset(defaultValues);
     };
 
