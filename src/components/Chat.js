@@ -29,8 +29,8 @@ const Chat = () => {
         hour = hour < 10 ? '0' + hour : hour;
         let minute = d.getMinutes();
         minute = minute < 10 ? '0' + minute : minute;
-        let second = d.getSeconds();
-        second = second < 10 ? '0' + second : second;
+        // let second = d.getSeconds();
+        // second = second < 10 ? '0' + second : second;
         let time = (hour > 12) ? (hour-12 + ':' + minute + ':PM') : (hour + ':' + minute +':AM');
 
         return `${day}/${month}/${year} ${time}`;
