@@ -1,9 +1,22 @@
+.form-holder {
+    margin-top: 5px;
+    width: 360px;
+    height: 200px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
 .container {
-    min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    margin-top: 5px;
+    width: 245px;
+    height: 80%;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #baafaf;
+
 }
 
 .error {

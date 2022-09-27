@@ -24,40 +24,42 @@ const SignIn = () => {
 	};
 
 	return (
-		<form className={styles.container}>
-			<Controller
-				name={"username"}
-				control={control}
-				render={({ field: { onChange, value } }) => (
-					<TextField
-						className={styles.input}
-						onChange={onChange}
-						value={value}
-						label={"Username"}
-						required={true}
-					/>
-				)}
-			/>
-			{errors.username && (
-				<p className={styles.error}>This field is required</p>
-			)}
+        <div className={styles[`form-holder`]}>
+            <form className={styles.container}>
+                <Controller
+                    name={"username"}
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                        <TextField
+                            className={styles.input}
+                            onChange={onChange}
+                            value={value}
+                            label={"Username"}
+                            required={true}
+                        />
+                    )}
+                />
+                {errors.username && (
+                    <p className={styles.error}>This field is required</p>
+                )}
 
-			<Button
-				variant={"contained"}
-				color={"primary"}
-				style={{ padding: '10px', fontSize: '16px', borderRadius: '0', }}
-				onClick={handleSubmit(onSubmit)}
-			>
-				Sign In
-			</Button>
-			<Button
-				variant={"contained"}
-				style={{ padding: '10px', fontSize: '16px', borderRadius: '0',}}
-				onClick={() => reset()}
-			>
-				Reset
-			</Button>
-		</form>
+                <Button
+                    variant={"contained"}
+                    color={"primary"}
+                    style={{ padding: '10px', fontSize: '16px', borderRadius: '10%', marginTop: '20px' }}
+                    onClick={handleSubmit(onSubmit)}
+                >
+                    Sign In
+                </Button>
+                {/* <Button
+                    variant={"contained"}
+                    style={{ padding: '10px', fontSize: '16px', borderRadius: '0',}}
+                    onClick={() => reset()}
+                >
+                    Reset
+                </Button> */}
+            </form>
+        </div>
 	);
 };
 
