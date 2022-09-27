@@ -6,14 +6,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
 
   return (
-    <>
+    <main className='background'>
       <Router>
         <Routes>
           <Route path="/" element={ <SignIn /> } />
           <Route path="/chat/:user" element={ <Chat /> } />
         </Routes>
       </Router>
-    </>
+    </main>
   );
 }
 

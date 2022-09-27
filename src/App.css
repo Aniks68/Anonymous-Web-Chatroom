@@ -1,8 +1,28 @@
-img {
+html {
+  background-color: #282c34;
+  min-height: 100vh;
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(./assets/mist-forest.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.user {
   border-radius: 50%;
   height: 45px;
   margin-top: -20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: antiquewhite;
+  font-size: 24px;
+  width: 100vw;
 }
 
 p {
@@ -37,6 +57,7 @@ p {
 .received {
   border: 1px solid lightgray;
   background-color: #FAFAFA;
+  color: #395dff;
   border-top-left-radius: 1000px;
   float: left;
 }

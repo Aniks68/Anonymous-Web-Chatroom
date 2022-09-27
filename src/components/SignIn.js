@@ -24,7 +24,7 @@ const SignIn = () => {
 	};
 
 	return (
-		<form className={styles.form}>
+		<form className={styles.container}>
 			<Controller
 				name={"username"}
 				control={control}

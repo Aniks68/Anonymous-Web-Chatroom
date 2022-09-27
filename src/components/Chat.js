@@ -18,7 +18,9 @@ const Chat = () => {
 	}, []);
 	return (
 		<>
-			<div>Chat</div>
+            <div className="chat">
+                <h1>Chat</h1>
+                </div>
 			<div className="msgs">
 				{messages.map(({ id, text, user }) => (
 					<div>
@@ -26,7 +28,7 @@ const Chat = () => {
 							key={id}
 							className={`msg ${user === currUser ? "sent" : "received"}`}
 						>
-							<h2>{user}</h2>
+							<h3 className="user">{user}</h3>
 							<p>{text}</p>
 						</div>
 					</div>
