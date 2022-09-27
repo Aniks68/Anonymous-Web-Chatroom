@@ -45,14 +45,14 @@ const SignIn = () => {
 			<Button
 				variant={"contained"}
 				color={"primary"}
-				style={{ marginRight: "5px" }}
+				style={{ padding: '10px', fontSize: '16px', borderRadius: '0', }}
 				onClick={handleSubmit(onSubmit)}
 			>
 				Sign In
 			</Button>
 			<Button
 				variant={"contained"}
-				style={{ color: "grey" }}
+				style={{ padding: '10px', fontSize: '16px', borderRadius: '0',}}
 				onClick={() => reset()}
 			>
 				Reset
