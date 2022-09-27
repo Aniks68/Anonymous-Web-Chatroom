@@ -39,7 +39,7 @@ const Chat = () => {
 	return (
 		<>
             <div className="chat">
-                <h1>Chat</h1>
+                <h1>Chat Room</h1>
                 </div>
 			<div className="msgs">
 				{messages.map(({ id, text, user, createdAt }) => (

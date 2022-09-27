@@ -78,9 +78,12 @@ p {
 }
 
 .msgs {
-  margin: 110px 0;
+  margin: 0 0;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
 
