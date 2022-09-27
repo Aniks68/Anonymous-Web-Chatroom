@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { db } from "../firebase";
 import SendMessage from "./SendMessage";
 import { useParams } from "react-router-dom";
@@ -7,6 +7,7 @@ const Chat = () => {
 	const { user } = useParams();
 	const currUser = user;
 	const [messages, setMessages] = useState([]);
+    const scroll = useRef();
 
 	useEffect(() => {
 		db.collection("messages")
@@ -34,7 +35,8 @@ const Chat = () => {
 					</div>
 				))}
 			</div>
-			<SendMessage />
+			<SendMessage scroll={scroll} />
+            <div ref={scroll}></div>
 		</>
 	);
 };
