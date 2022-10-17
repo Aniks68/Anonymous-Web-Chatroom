@@ -1,6 +1,5 @@
 html {
   background-color: #282c34;
-  min-height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(./assets/mist-forest.jpeg);
   background-size: cover;
   background-position: center;
@@ -24,7 +23,6 @@ html {
   align-items: center;
   color: antiquewhite;
   font-size: 24px;
-  width: 100vw;
 }
 
 p {
