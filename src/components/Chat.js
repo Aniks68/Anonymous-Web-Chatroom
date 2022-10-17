@@ -50,7 +50,7 @@ const Chat = () => {
 						>
 							<h3 className="user">{user}</h3>
 							<p>{text}</p>
-                            <h3 className="time">{formatDateTime(createdAt)}</h3>
+							<h3 className="time">{formatDateTime(createdAt)}</h3>
 						</div>
 					</div>
 				))}
